@@ -1,0 +1,404 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Contenido principal (lo que se ve en la pantalla) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/white">
+
+        <!-- Barra superior -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <!-- Botón del Menú -->
+            <ImageButton
+                android:id="@+id/btnMenu"
+                android:layout_width="29dp"
+                android:layout_height="27dp"
+                android:background="@null"
+                android:contentDescription="Menú"
+                android:scaleType="fitCenter"
+                android:src="@drawable/menu"
+                app:tint="@color/black" />
+
+
+
+
+            <!-- Botón de Notificaciones -->
+            <ImageButton
+                android:id="@+id/btnNotificaciones"
+                android:layout_width="36dp"
+                android:layout_height="27dp"
+                android:layout_marginLeft="300dp"
+                android:background="@null"
+                android:contentDescription="Notificaciones"
+                android:scaleType="fitCenter"
+                android:src="@drawable/campana"
+                app:tint="@color/black" />
+        </LinearLayout>
+
+        <!-- Texto de bienvenida -->
+        <TextView
+            android:id="@+id/saludoTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hola de nuevo, Usuario X"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:gravity="center"
+            android:layout_marginTop="16dp" />
+
+        <!-- Sección de botones de emergencia y QR -->
+        <!-- Sección de botones de emergencia y QR -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginTop="16dp"
+            android:gravity="end">
+
+            <Button
+                android:id="@+id/btnContactosEmergencia"
+                android:layout_width="0dp"
+                android:layout_height="57dp"
+                android:layout_weight="1"
+                android:background="@drawable/button_background"
+                android:backgroundTint="#ccbae2"
+                android:contentDescription="Emergencia"
+                android:drawableLeft="@drawable/emergency"
+                android:drawablePadding="10dp"
+                android:paddingLeft="16dp"
+                android:scaleType="fitCenter"
+                android:text="Contactos de Emergencia"
+                android:textAlignment="center"
+                android:textColor="@android:color/white"
+                android:textSize="10sp" />
+
+            <Button
+                android:id="@+id/btnCodigoQR"
+                android:layout_width="0dp"
+                android:layout_height="57dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/button_background"
+                android:backgroundTint="#ccbae2"
+                android:contentDescription="Codigo QR"
+                android:scaleType="fitCenter"
+                android:drawableLeft="@drawable/codigoqr"
+                android:drawablePadding="10dp"
+                android:text="Codigo QR"
+                android:textColor="@android:color/white"
+                android:textSize="10sp"
+                android:textAlignment="center"
+                android:paddingLeft="16dp"/>
+
+        </LinearLayout>
+
+
+        <!-- Texto entre las secciones -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Elige el tipo de análisis que te quieres hacer"
+            android:textColor="@color/black"
+            android:textSize="11sp"
+            android:gravity="left"
+            android:layout_marginTop="40dp"
+            android:layout_marginBottom="30dp" />
+
+        <!-- Sección de botones de glucosa, oxígeno y signos vitales -->
+        <!-- Sección de botones de glucosa, oxígeno y signos vitales -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp"
+            android:layout_weight="1"
+            android:gravity="end">
+
+            <!-- Botón de Glucosa -->
+            <LinearLayout
+                android:id="@+id/btnGlucosa"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:background="@drawable/button_background"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#630E8B"
+                android:gravity="center_vertical">
+
+                <!-- Icono de Glucosa a la izquierda -->
+                <ImageButton
+                    android:layout_width="43dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/glucosa"
+                    android:contentDescription="Glucosa"
+                    android:layout_marginStart="50dp"
+                    android:scaleType="fitCenter"
+                    android:background="@null" />
+
+                <!-- Texto en el centro -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Glucosa"
+                    android:textColor="@android:color/white"
+                    android:textSize="24dp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Botón de Oxígeno -->
+            <LinearLayout
+                android:id="@+id/btnOxigeno"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:background="@drawable/button_background"
+                android:layout_marginBottom="8dp"
+                android:backgroundTint="#A400BF"
+                android:gravity="center_vertical">
+
+                <!-- Icono de Oxígeno a la izquierda -->
+                <ImageButton
+                    android:layout_width="43dp"
+                    android:layout_height="45dp"
+                    android:src="@drawable/oxigeno"
+                    android:contentDescription="Oxígeno"
+                    android:layout_marginStart="50dp"
+                    android:scaleType="fitCenter"
+                    android:background="@null" />
+
+                <!-- Texto en el centro -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Oxígeno"
+                    android:textColor="@android:color/white"
+                    android:textSize="24dp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+            <!-- Botón de Signos Vitales -->
+            <LinearLayout
+                android:id="@+id/btnSignosVitales"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:orientation="horizontal"
+                android:background="@drawable/button_background"
+                android:backgroundTint="#BA62FF"
+                android:gravity="center_vertical">
+
+                <!-- Icono de Signos Vitales a la izquierda -->
+                <ImageButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/signosv"
+                    android:contentDescription="Signos Vitales"
+                    android:layout_marginStart="50dp"
+                    android:scaleType="fitCenter"
+                    android:background="@null" />
+
+                <!-- Texto en el centro -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Signos Vitales"
+                    android:textColor="@android:color/white"
+                    android:textSize="24dp"
+                    android:gravity="center" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- Barra inferior (fija en la parte inferior) -->
+        <LinearLayout
+            android:id="@+id/bottomBar"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/light_gray"
+            android:elevation="4dp"
+            android:orientation="horizontal"
+            android:padding="8dp">
+
+            <!-- Botón 1: Home -->
+            <ImageButton
+                android:id="@+id/btnHome"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:contentDescription="Inicio"
+                android:src="@drawable/hogar"
+                app:tint="@color/purple_dark"
+                android:scaleType="fitCenter"/>
+
+            <!-- Botón 2: Historia Clínica -->
+            <ImageButton
+                android:id="@+id/btnHistoriaClinica"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:contentDescription="Historia Clínica"
+                android:src="@drawable/expediente"
+                app:tint="@color/purple_dark"
+                android:scaleType="fitCenter"/>
+
+            <!-- Botón 3: Configuraciones -->
+            <ImageButton
+                android:id="@+id/btnSettings"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:contentDescription="Configuración"
+                android:src="@drawable/ajustes"
+                app:tint="@color/purple_dark"
+                android:scaleType="fitCenter"/>
+
+            <!-- Botón 4: Perfil -->
+            <ImageButton
+                android:id="@+id/btnPerfil"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@null"
+                android:contentDescription="Perfil"
+                android:src="@drawable/siguiendo"
+                app:tint="@color/purple_dark"
+                android:scaleType="fitCenter"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Menú deslizable -->
+    <LinearLayout
+        android:id="@+id/drawerMenu"
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:elevation="4dp">
+
+        <!-- Título de la sección -->
+        <TextView
+            android:id="@+id/menuTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Configuración"
+            android:textSize="20sp"
+            android:padding="16dp"
+            android:textColor="@color/black"
+            android:gravity="center" />
+
+        <!-- Opción de menú 1: Preferencias y valores -->
+        <LinearLayout
+            android:id="@+id/optionPreferencias"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/informacion"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Preferencias y valores"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!-- Opción de menú 2: Idioma -->
+        <LinearLayout
+            android:id="@+id/optionIdioma"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/idioma"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Idioma"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!-- Opción de menú 3: Historial clínico -->
+        <LinearLayout
+            android:id="@+id/optionHistoriaClinica"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/expediente"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Historial Clínico"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <!-- Opción de menú 4: Guía de uso -->
+        <LinearLayout
+            android:id="@+id/optionGuia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/guia"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Guía de uso"
+                android:textSize="16sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

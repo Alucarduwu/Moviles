@@ -1,0 +1,73 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.myapplication">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        tools:targetApi="31">
+
+        <activity android:name=".HomeActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".LoginActivity" android:exported="true">
+            <!-- Agrega un intent-filter si lo necesitas -->
+        </activity>
+        <activity android:name=".FingerprintActivity">
+            <!-- Si es la actividad principal o tiene configuraciones adicionales, agrégalas aquí -->
+        </activity>
+
+        <activity android:name=".RegisterActivity">
+            <!-- Configuraciones de la actividad de registro -->
+        </activity>
+        <activity android:name=".GeneralDataActivity">
+            <!-- Puedes agregar configuraciones adicionales si es necesario -->
+        </activity>
+
+        <activity android:name=".ConditionsActivity" />
+        <activity android:name=".HistorialClinicaActivity"/>
+
+        <activity android:name=".PrivacyActivity">
+            <!-- Si deseas agregar una pantalla de inicio o personalización, puedes hacerlo aquí -->
+        </activity>
+        <activity android:name=".CodigoqrActivity"></activity>
+        <activity android:name=".ContactosemergenciaActivity"></activity>
+        <activity android:name=".AnalisisexitosoActivity"></activity>
+        <activity android:name=".GlucosascActivity"></activity>
+        <activity android:name=".OxigenoscActivity"></activity>
+        <activity android:name=".SignosvitalesscActivity"></activity>
+        <activity android:name=".CuentaActivity"></activity>
+        <activity
+            android:name=".SplashActivity"
+            android:label="Splash"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        </activity>
+        <activity android:name=".PerfilUsuarioActivity"/>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+
+
+
+
+
+    </application>
+
+</manifest>

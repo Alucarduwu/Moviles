@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="left"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <!-- CheckBox para hipertensión -->
+
+    <!-- CheckBox para artritis -->
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="122dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="¿Tienes alguna condicion cronica?"
+        android:textColor="#494B4F"
+        android:textSize="20sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <CheckBox
+        android:id="@+id/hypertensionCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Hipertensión"
+        android:textColor="#494B4F"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <!-- CheckBox para diabetes -->
+
+    <CheckBox
+        android:id="@+id/arthritisCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Artritis"
+        android:textColor="#494B4F"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/hypertensionCheckBox"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <!-- CheckBox para condiciones cardíacas -->
+
+    <CheckBox
+        android:id="@+id/diabetesCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Diabetes"
+        android:textColor="#494B4F"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/arthritisCheckBox"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <!-- CheckBox para otros -->
+    <CheckBox
+        android:id="@+id/heartCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Corazón"
+        android:textColor="#494B4F"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/diabetesCheckBox"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <!-- Botón "Siguiente" -->
+
+    <CheckBox
+        android:id="@+id/otherCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Otros"
+        android:textColor="#494B4F"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/heartCheckBox" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="187dp"
+        android:layout_height="40dp"
+        android:text="Siguiente"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:background="@drawable/button_background"
+        app:layout_constraintTop_toBottomOf="@id/otherCheckBox"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="32dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

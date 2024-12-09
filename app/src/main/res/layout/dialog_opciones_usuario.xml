@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@color/white"
+    android:minHeight="500dp"
+    android:layout_gravity="center_horizontal"
+    >
+
+    <!-- Título del usuario -->
+<TextView
+android:id="@+id/tvUsuario"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:text="Usuario: example@domain.com"
+android:textColor="@color/black"
+android:textSize="20sp"
+    android:layout_marginBottom="16dp" />
+
+    <!-- Botón X en la esquina superior derecha -->
+    <ImageButton
+        android:id="@+id/btnCloseDialog"
+        android:layout_width="60dp"
+        android:layout_height="33dp"
+        android:layout_gravity="end|top"
+        android:layout_margin="16dp"
+        android:contentDescription="Cerrar diálogo"
+        android:src="@drawable/regresar" />
+
+    <!-- Opción: Sobre nosotros -->
+<LinearLayout
+android:id="@+id/llSobreNosotros"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:padding="12dp"
+android:gravity="center_vertical"
+android:background="?android:attr/selectableItemBackground">
+
+<ImageView
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:src="@drawable/siguiendo"
+    android:layout_marginEnd="8dp" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Sobre nosotros"
+    android:textSize="18sp"
+android:textColor="@color/black" />
+</LinearLayout>
+
+    <!-- Opción: Contáctanos -->
+<LinearLayout
+android:id="@+id/llContactanos"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:padding="12dp"
+android:gravity="center_vertical"
+android:background="?android:attr/selectableItemBackground">
+
+<ImageView
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:src="@drawable/contactanos"
+    android:layout_marginEnd="8dp" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Contáctanos"
+    android:textSize="18sp"
+android:textColor="@color/black" />
+</LinearLayout>
+
+    <!-- Opción: Términos y condiciones -->
+<LinearLayout
+android:id="@+id/llTerminos"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:padding="12dp"
+android:gravity="center_vertical"
+android:background="?android:attr/selectableItemBackground">
+
+<ImageView
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:src="@drawable/terminoscondiciones"
+    android:layout_marginEnd="8dp" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Términos y condiciones"
+    android:textSize="18sp"
+android:textColor="@color/black" />
+</LinearLayout>
+
+    <!-- Opción: Comentarios -->
+<LinearLayout
+android:id="@+id/llComentarios"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:padding="12dp"
+android:gravity="center_vertical"
+android:background="?android:attr/selectableItemBackground">
+
+<ImageView
+    android:layout_width="24dp"
+    android:layout_height="24dp"
+    android:src="@drawable/megafono"
+    android:layout_marginEnd="8dp" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Comentarios"
+    android:textSize="18sp"
+android:textColor="@color/black" />
+</LinearLayout>
+
+    </LinearLayout>

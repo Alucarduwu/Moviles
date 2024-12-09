@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="VitaCore">MyApplication</string>
+
+    <!-- Lista de géneros -->
+    <string-array name="gender_array">
+        <item>Seleccionar género</item>
+        <item>Masculino</item>
+        <item>Femenino</item>
+    </string-array>
+
+    <!-- Cadenas para los botones del menú -->
+    <string name="openDrawer">Abrir Menú</string>
+    <string name="closeDrawer">Cerrar Menú</string>
+</resources>
+
+

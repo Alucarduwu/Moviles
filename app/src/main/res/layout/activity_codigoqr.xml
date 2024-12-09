@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/fondodegradado">
+
+    <!-- Botón de Regresar en la esquina superior izquierda -->
+    <ImageButton
+        android:id="@+id/btnRegresar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/regresar"
+        android:contentDescription="Regresar"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp" />
+
+    <!-- Texto descriptivo en el centro -->
+    <TextView
+        android:id="@+id/textoDescripcion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Este código QR contiene el historial clínico del usuario. El cual contiene datos previos y los resultados de sus análisis."
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:textAlignment="center"
+        android:layout_below="@id/btnRegresar"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginHorizontal="20dp" />
+
+    <!-- Imagen Historial Clínico debajo del texto -->
+    <ImageView
+        android:id="@+id/imagenHistorialClinico"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/historialclinico"
+        android:layout_below="@id/textoDescripcion"
+    android:layout_centerHorizontal="true"
+    android:layout_marginTop="40dp" />
+
+    <!-- Icono de compartir debajo de la imagen -->
+    <ImageButton
+        android:id="@+id/btnCompartir"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/compartir"
+        android:background="@null"
+        android:contentDescription="Compartir"
+        android:layout_below="@id/imagenHistorialClinico"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp" />
+
+</RelativeLayout>
